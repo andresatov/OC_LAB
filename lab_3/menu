@@ -1,0 +1,17 @@
+████████████████████████████████████████████████████████
+██                select menu                         ██
+██ 1)outputDiskList                                   ██
+██ 2)outputInfoDisk                                   ██
+██ 3)createDir                                        ██
+██ 4)deleteDir                                        ██
+██ 5)createFile                                       ██
+██ 6)deleteFile                                       ██
+██ 7)copyFile                                         ██
+██ 8)moveFile                                         ██
+██ 9)getFileAtt                                       ██
+██ 10)getFileInd                                      ██
+██ 12)setFileAtt                                      ██
+██ 12)getFileTime                                     ██
+██ 13)setFileTime                                     ██
+██ 0)Exit                                             ██
+████████████████████████████████████████████████████████
