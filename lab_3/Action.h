@@ -5,7 +5,7 @@
 #ifndef LAB3_OC_ACTION_H
 #define LAB3_OC_ACTION_H
 
-
+#include "AsyncCopy.h"
 #include <functional>
 #include <map>
 #include <filesystem>
@@ -39,13 +39,14 @@ private:
 
     void setFileAtt();
 
-    void getFileInd();
-
     void getFileTime();
 
     void setFileTime();
-
+#ifdef WINAPI
+    bool isDirectoryExists(const wchar_t *filename);
+#else
     bool checkIsPath(std::filesystem::path path);
+#endif
 };
 
 
