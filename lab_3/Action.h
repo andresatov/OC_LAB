@@ -8,6 +8,7 @@
 
 #include <functional>
 #include <map>
+#include <filesystem>
 
 class Action {
 public:
@@ -44,6 +45,7 @@ private:
 
     void setFileTime();
 
+    bool checkIsPath(std::filesystem::path path);
 };
 
 

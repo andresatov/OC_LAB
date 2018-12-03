@@ -10,7 +10,7 @@
 ██ 8)moveFile                                         ██
 ██ 9)getFileAtt                                       ██
 ██ 10)getFileInd                                      ██
-██ 12)setFileAtt                                      ██
+██ 11)setFileAtt                                      ██
 ██ 12)getFileTime                                     ██
 ██ 13)setFileTime                                     ██
 ██ 0)Exit                                             ██
