@@ -1,0 +1,12 @@
+████████████████████████████████████████████████████████
+██                select menu                         ██
+██ 1)systemInfo()                                     ██
+██ 2)virtualMemoryStatus()                            ██
+██ 3)virtualPageStatus()                              ██
+██ 4)separateReserveCommit()                          ██
+██ 5)simultaneousReserveCommit()                      ██
+██ 6)writeData()                                      ██
+██ 7)protectVirtualPage()                             ██
+██ 8)freeVirtualPage()                                ██
+██ 0)exit                                             ██
+████████████████████████████████████████████████████████
