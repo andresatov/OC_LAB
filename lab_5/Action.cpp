@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <omp.h>
 #include "Action.h"
 
 __declspec(thread) double pi;
@@ -74,9 +75,6 @@ void Action::winAPI_calculation_PI() {
     }
 }
 
-void Action::openMP_calculation_PI() {
-
-}
 
 int Action::calculation(LPVOID lpParameter) {
     DWORD ind = static_cast<DWORD>(lpParameter);
@@ -105,4 +103,29 @@ int Action::calculation(LPVOID lpParameter) {
 
     }
     return 0;
+}
+
+void Action::openMP_calculation_PI() {
+    int number_thread;
+    std::cout << "your student ticket" << std::endl;
+    std::cin >> block_size;
+    block_size *= 10;
+    std::cout << "Еnter the number of threads" << std::endl;
+    std::cin >> number_thread;
+    omp_set_dynamic(0);
+    omp_set_num_threads(number_thread);
+    long begin = GetTickCount();
+
+    double answer = 0;
+#pragma omp parallel for schedule(dynamic, block_size) reduction(+:answer)
+    for (int i = 0; i <order; i++) {
+        double xi = (i + 0.5) / order;
+        answer += 4 / (1 + xi * xi);
+    }
+
+    pi /= order;
+    std::cout << std::setprecision(100) << "pi = " << answer << std::endl;
+    double end = GetTickCount();
+    std::cout << "time: " << (end - begin) << " mc" << std::endl;
+
 }
